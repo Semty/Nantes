@@ -53,6 +53,10 @@ extension NantesLabel {
                 lines[originalIndex] = tokenLine
                 continue
             }
+            
+            if originalIndex == -1 {
+                continue
+            }
 
             let originalLine = lines[originalIndex]
             let originalRange = NSRange(range: CTLineGetStringRange(originalLine))
